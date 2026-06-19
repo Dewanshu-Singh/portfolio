@@ -48,16 +48,12 @@ const Portfolio = () => {
 
         <div className="projects-sticky-container">
           {projectsData.map((project, index) => (
-            <motion.div 
+            <div 
               key={project.id} 
               className="sticky-project-card"
               style={{
                 '--index': index
               }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-100px" }}
             >
               <div className="sticky-project-media">
                 <img src={project.image} alt={project.title} className="sticky-project-img" />
@@ -85,7 +81,7 @@ const Portfolio = () => {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
