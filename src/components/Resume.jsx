@@ -32,7 +32,6 @@ const Resume = () => {
   ];
 
   const card3DStyle = {
-    padding: '40px',
     height: '100%',
     background: 'rgba(20, 20, 25, 0.15)',
     backdropFilter: 'blur(10px)',
@@ -63,6 +62,7 @@ const Resume = () => {
         <div className="resume-grid">
           {/* Left Panel: Timeline */}
           <motion.div 
+            className="resume-panel"
             style={card3DStyle}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -92,6 +92,7 @@ const Resume = () => {
 
           {/* Right Panel: Skills */}
           <motion.div 
+            className="resume-panel"
             style={card3DStyle}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
