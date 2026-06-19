@@ -321,6 +321,10 @@ section {
 .mobile-toggle:hover {
   color: var(--accent-1);
 }
+.mobile-menu {
+  background: rgba(10, 10, 15, 0.95) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
 
 /* Hero Section */
 .hero-section {
