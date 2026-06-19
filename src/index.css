@@ -948,8 +948,6 @@ section {
   .sticky-project-card { 
     flex-direction: column; 
     height: auto; 
-    position: relative; /* Remove sticky on mobile for better flow */
-    top: 0 !important; 
   }
   .sticky-project-media { flex: none; height: 200px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .sticky-project-info { padding: 24px; }
