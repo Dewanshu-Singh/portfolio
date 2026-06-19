@@ -45,6 +45,13 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Custom Scrollbar */
@@ -837,6 +844,11 @@ section {
   color: var(--accent-1);
   font-size: 1.5rem;
   transition: 0.4s;
+  flex-shrink: 0;
+}
+.card-detail {
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .contact-card-item:hover .card-icon-box {
   background: var(--accent-1);
