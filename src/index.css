@@ -858,6 +858,18 @@ section {
   box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.1);
 }
 
+/* Contact Form Layout */
+.form-group-row {
+  display: flex;
+  gap: 24px;
+}
+.form-group-row .form-group {
+  flex: 1;
+}
+.contact-form-container {
+  padding: 50px;
+}
+
 /* Custom Cursor Tracker */
 .cursor-dot {
   position: fixed;
@@ -899,7 +911,11 @@ section {
   .scroll-indicator { display: none; }
   
   .resume-grid { grid-template-columns: 1fr; gap: 40px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .contact-cards { display: flex; flex-direction: column; align-items: center; }
+  .contact-form-container { padding: 30px; }
+  .form-group-row { flex-direction: column; gap: 0; }
+  
   .cursor-dot, .cursor-outline { display: none; }
   
   /* Portfolio Responsiveness */

@@ -96,7 +96,7 @@ const Contact = () => {
             transition={{ duration: 0.8, type: "spring" }}
             viewport={{ once: true }}
           >
-            <div className="contact-form-container glass-panel" style={{ padding: '50px', height: '100%' }}>
+            <div className="contact-form-container glass-panel" style={{ height: '100%' }}>
               <form ref={form} className="contact-form" onSubmit={sendEmail}>
                 <motion.div 
                   className="form-group-row"
