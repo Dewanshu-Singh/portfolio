@@ -36,8 +36,8 @@ const Navbar = () => {
             <a href="#contact" className="nav-link">Contact</a>
           </div>
 
-          <button className="mobile-toggle" onClick={toggleMenu} style={{ background: 'transparent', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer', display: 'none' }}>
-            ☰
+          <button className="mobile-toggle" onClick={toggleMenu}>
+            {mobileMenuOpen ? '✕' : '☰'}
           </button>
         </div>
       </nav>

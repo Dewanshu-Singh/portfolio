@@ -296,19 +296,23 @@ section {
   background: var(--accent-1);
   transition: 0.3s ease;
 }
-.nav-link:hover {
-  color: var(--text-primary);
-}
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* Mobile Hamburger Toggle */
 .mobile-toggle {
   display: none;
   background: transparent;
   border: none;
-  color: white;
-  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-size: 2rem;
   cursor: pointer;
+  z-index: 1001; /* Above the mobile menu */
+  transition: var(--transition-fast);
+}
+.mobile-toggle:hover {
+  color: var(--accent-1);
 }
 
 /* Hero Section */
