@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const projectsData = [
@@ -34,19 +35,29 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio-section">
       <div className="container">
-        <div className="section-header">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <span className="section-tag">Showcase</span>
           <h2 className="section-title">Selected <span className="text-gradient">Projects</span></h2>
-        </div>
+        </motion.div>
 
         <div className="projects-sticky-container">
           {projectsData.map((project, index) => (
-            <div 
+            <motion.div 
               key={project.id} 
               className="sticky-project-card"
               style={{
                 '--index': index
               }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <div className="sticky-project-media">
                 <img src={project.image} alt={project.title} className="sticky-project-img" />
@@ -74,7 +85,7 @@ const Portfolio = () => {
                   </div>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

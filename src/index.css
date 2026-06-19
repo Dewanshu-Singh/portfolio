@@ -884,16 +884,34 @@ section {
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .mobile-toggle { display: block; }
-  .hero-grid { grid-template-columns: 1fr; text-align: center; }
-  .hero-title { font-size: 3.2rem; }
-  .hero-description { margin: 0 auto 40px auto; }
+  .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+  .hero-title { font-size: 2.8rem; }
+  .hero-description { margin: 0 auto 30px auto; font-size: 1.1rem; }
   .hero-actions { justify-content: center; }
   .hero-contact-footer { flex-direction: column; align-items: center; gap: 15px; margin: 0 auto; }
   .contact-footer-divider { display: none; }
-  .hero-visual { justify-content: center; }
-  .profile-image-container { max-width: 360px; height: 420px; }
+  .hero-visual { justify-content: center; margin-top: 20px; }
+  .profile-image-container { max-width: 320px; height: 380px; }
   .scroll-indicator { display: none; }
+  
   .resume-grid { grid-template-columns: 1fr; gap: 40px; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .cursor-dot, .cursor-outline { display: none; }
+  
+  /* Portfolio Responsiveness */
+  .projects-sticky-container { padding-bottom: 40px; gap: 40px; }
+  .sticky-project-card { 
+    flex-direction: column; 
+    height: auto; 
+    position: relative; /* Remove sticky on mobile for better flow */
+    top: 0 !important; 
+  }
+  .sticky-project-media { flex: none; height: 250px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .sticky-project-info { padding: 30px; }
+  .project-title { font-size: 1.6rem !important; }
+  
+  /* Timeline Responsiveness */
+  .timeline { padding-left: 20px; }
+  .timeline-dot { left: -27px; }
+  .timeline-role { font-size: 1.3rem; }
 }

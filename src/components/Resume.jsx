@@ -49,34 +49,65 @@ const Resume = () => {
   return (
     <section id="resume" className="resume-section">
       <div className="container">
-        <div className="section-header">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <span className="section-tag">Experience</span>
           <h2 className="section-title">My <span className="text-gradient">Journey</span></h2>
-        </div>
+        </motion.div>
 
         <div className="resume-grid">
           {/* Left Panel: Timeline */}
-          <div style={card3DStyle}>
+          <motion.div 
+            style={card3DStyle}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
             <h3 style={{ marginBottom: '40px', fontSize: '2rem' }} className="text-gradient">Timeline</h3>
             <div className="timeline">
               {experiences.map((exp, idx) => (
-                <div key={idx} className="timeline-item">
+                <motion.div 
+                  key={idx} 
+                  className="timeline-item"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.2 }}
+                  viewport={{ once: true }}
+                >
                   <div className="timeline-dot"></div>
                   <span className="timeline-year">{exp.year}</span>
                   <h4 className="timeline-role">{exp.role}</h4>
                   <p className="timeline-org">{exp.org}</p>
                   <p style={{ color: 'var(--text-secondary)' }}>{exp.desc}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Panel: Skills */}
-          <div style={card3DStyle}>
+          <motion.div 
+            style={card3DStyle}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
             <h3 style={{ marginBottom: '40px', fontSize: '2rem' }} className="text-gradient">Skill Arsenal</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
               {skills.map((skillGroup, idx) => (
-                <div key={idx}>
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  viewport={{ once: true }}
+                >
                   <h4 style={{ color: 'var(--text-primary)', marginBottom: '16px', fontSize: '1.2rem', fontWeight: '800' }}>{skillGroup.cat}</h4>
                   <div className="skill-badges-list">
                     {skillGroup.items.map((skill, i) => (
@@ -85,10 +116,10 @@ const Resume = () => {
                       </span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
